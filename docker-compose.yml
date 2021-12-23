@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  docker-ubuntu-postfix-example:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: docker-ubuntu-postfix-example-image:latest
+    container_name: docker-ubuntu-postfix-example-container
+    volumes:
+      # Postfixの設定をマウントする
+      - type: bind
+        source: ./configs/main.cf
+        target: /etc/postfix/main.cf
+      # SASL認証のパスワードをマウントする
+      - type: bind
+        source: ./configs/sasl_passwd
+        target: /etc/postfix/sasl_passwd
