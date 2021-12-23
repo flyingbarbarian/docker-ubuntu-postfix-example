@@ -23,12 +23,12 @@ SMTPリレーにはMailtrapの使うことを念頭に作っています。
 
 例
 ```
-$ sendmail your-mail-address@example.com
-$ From:your-mail-address@example.com
-$ To:your-mail-address@example.com
-$ Subject:Hello World
-$ 
-$ Hello World
-$ 
-$ .
+$ sendmail your-email@example.com
+From:your-email@example.com
+To:your-email@example.com
+Subject:Hello World
+
+Hello World
+
+.
 ```
